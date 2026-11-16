@@ -4,8 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-import util.ConfigReader;
-import util.DriverFactory;
+import utils.ConfigReader;
+import drivers.DriverFactory;
 public class BaseClass {
 
 	public static WebDriver driver;
@@ -15,9 +15,9 @@ public class BaseClass {
 	
 	@BeforeMethod
 	public void setup() {
-		driver = df.initializeDriver(cr.getProperty("browser"));
+		driver = df.Instalizedriver(cr.getproperty("browser"));
 		driver.manage().window().maximize();
-		driver.get(cr.getProperty("url"));
+		driver.get(cr.getproperty("url"));
 		
 		
 	}
